@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Vickingos Bar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="admin-header">
+        <div class="logo">VICKINGOS<span>ADMIN</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="btn-outline">Ver Sitio</a>
+        </div>
+    </div>
+
+    <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Gestión de Reservas</h2>
+                <p class="subtitle">Confirma los pagos y asigna las mesas.</p>
+            </div>
+            
+            <div class="glass-container" style="padding: 1.5rem; flex: 1; min-width: 300px; margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Configuración de Precios</h3>
+                <form id="priceForm" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="input-group">
+                        <label>Precio VIP (Mesas 1-4)</label>
+                        <input type="number" id="priceVip" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Precio Medio (Mesas 5-8)</label>
+                        <input type="number" id="priceMedio" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Precio General (Mesas 9-12)</label>
+                        <input type="number" id="priceGeneral" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Guardar Precios</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="reservations-grid" id="reservationsGrid" style="padding: 0; margin-top: 2rem;">
+            <!-- Las tarjetas de reservas se renderizarán aquí -->
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
